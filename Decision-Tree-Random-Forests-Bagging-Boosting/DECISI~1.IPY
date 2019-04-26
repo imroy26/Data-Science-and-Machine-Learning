@@ -810,19 +810,46 @@
   },
   {
    "cell_type": "code",
+   "execution_count": 94,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[2606   44]\n",
+      " [ 486   25]] \n",
+      "\n",
+      "             precision    recall  f1-score   support\n",
+      "\n",
+      "          0       0.84      0.98      0.91      2650\n",
+      "          1       0.36      0.05      0.09       511\n",
+      "\n",
+      "avg / total       0.77      0.83      0.77      3161\n",
+      " \n",
+      "\n",
+      "0.832331540652 \n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "CM_RF = confusion_matrix(y_test,pred_RF)\n",
+    "CR_RF = classification_report(y_test,pred_RF)\n",
+    "acc_RF = accuracy_score(y_test,pred_RF)\n",
+    "print(CM_RF,'\\n')\n",
+    "print(CR_RF,'\\n')\n",
+    "print(acc_RF,'\\n')"
+   ]
+  },
+  {
+   "cell_type": "code",
    "execution_count": null,
    "metadata": {
     "collapsed": true
    },
    "outputs": [],
-   "source": [
-    "CM_RF = confusion_matrix(y_test,pred_DT)\n",
-    "CR_RF = classification_report(y_test,pred_DT)\n",
-    "acc_RF = accuracy_score(y_test,pred_DT)\n",
-    "print(CM_RF,'\\n')\n",
-    "print(CR_RF,'\\n')\n",
-    "print(acc_DT,'\\n')"
-   ]
+   "source": []
   }
  ],
  "metadata": {
